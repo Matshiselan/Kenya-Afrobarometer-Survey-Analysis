@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "kenya_dea_gp"
+version = "0.0.1"
+description = "DEA and Goal Programming"
+authors = [
+  { name = "Ntando" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["kenya_dea_gp"]
+include = ["pyproject.toml", "kenya_dea_gp/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["kenya_dea_gp"]
+force-sort-within-sections = true
+
